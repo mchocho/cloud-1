@@ -1,0 +1,5 @@
+*.swp
+*.stackdump
+.DS_Store
+node_modules
+/screenshots
