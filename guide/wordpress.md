@@ -112,7 +112,7 @@ If you see the WordPress welcome page, that means our installation was successfu
 <a href="rds.md">
 &lt; Previous
 </a>
-
+|
 <a href="load_balancer.md" align="right">
 Next &gt;
 </a>

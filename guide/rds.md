@@ -3,7 +3,7 @@
 <p>
 Before we jump into our WordPress instance and build the site, we'll need to setup an SQL database.
 <br />
-We will use Amazon's <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html">RDS</a> service to create and host a scalable MySQL
+We will use Amazon's <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html">RDS</a> service to create and host a scalable MySQL server.
 <p>
 
 <p>

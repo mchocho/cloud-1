@@ -62,7 +62,7 @@ If everything goes right our EC2 is up and running. Copy the public IP address a
 <a href="../README.md">
 &lt; Previous
 </a>
-
+|
 <a href="rds.md" align="right">
 Next &gt;
 </a>

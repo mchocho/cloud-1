@@ -1,6 +1,6 @@
 <h1>Step 5: Let's build a fence</h1>
 
-<img src="https://i.imgur.com/c4kfrzQ.jpeg" align="center" width="120px" height="80px" />
+<img src="https://i.imgur.com/c4kfrzQ.jpeg" align="center" width="350px" height="230px" />
 
 <p>
 Now that we finally managed to get our WordPress app up & running, we'll need to create and add our <a href="">load balancer</a>
@@ -54,7 +54,7 @@ aws elbv2 describe-target-health --target-group-arn targetgroup-arn
 <a href="wordpress.md">
 &lt; Previous
 </a>
-
+|
 <a href="auto_scaling.md" align="right">
 Next &gt;
 </a>

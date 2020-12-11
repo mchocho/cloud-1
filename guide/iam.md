@@ -24,7 +24,7 @@ Every instance we create, stop, or destroy using the CLI will be in the name of 
 <a href="../">
 &lt; Previous
 </a>
-
+|
 <a href="ec2.md" align="right">
 Next &gt;
 </a>
