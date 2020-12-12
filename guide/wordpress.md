@@ -52,7 +52,7 @@ Exit
 ```
 
 <p>
-Now, let's install and sun apache.
+Now, let's install and run apache.
 </p>
 
 ```bash
@@ -62,7 +62,7 @@ service httpd start
 ```
 
 <p>
-Use the describe-instances from earlier command to get your EC2 Public DNS (IPv4) address and enter it in your browser.
+Use the describe-instances command from earlier to get your EC2 Public DNS (IPv4) address and enter it in your browser.
 <br />
 Next we will <a href="https://aws.amazon.com/getting-started/hands-on/deploy-wordpress-with-amazon-rds/5/">download and configure WordPress</a>.
 
@@ -89,9 +89,9 @@ nano wp-config.php
 * DB_HOST: <<DB HOSTNAME>>
 ```
 <p>
-We can also <a href="https://api.wordpress.org/secret-key/1.1/salt/">generate unique keys and salts for our authentication process with this link</a>.
+We can also <a href="https://api.wordpress.org/secret-key/1.1/salt/">generate unique keys and salts for the authentication process with this link</a>.
 <br />
-Finally we will deploy WordPress.
+Next we will deploy WordPress.
 </p>
 
 ```bash
@@ -105,7 +105,7 @@ sudo service httpd restart
 ```
 
 <p>
-If you see the WordPress welcome page, that means our installation was successful.
+If you see the WordPress welcome page, that means tje installation was successful.
 </p>
 
 <hr />

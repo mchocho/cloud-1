@@ -27,14 +27,14 @@ aws rds create-db-instance cloud-1 --db-instance-class db.t2.mirco --engine mysq
 ```
 
 <p>
-If everything goes well you should have an rds instance up and running run <a href="">describe-rds-instances</a> to verify it's running.
+If everything goes well you should have an rds instance up and running run describe-rds-instances to verify it's running.
 </p>
 
 <hr />
 <a href="ec2.md">
 &lt; Previous
 </a>
-
+|
 <a href="wordpress.md" align="right">
 Next &gt;
 </a>

@@ -1,7 +1,7 @@
 <h1>Step 2: This should be EC2 deploy</h1>
 
 <p>
-After setting our credentials up to CLI, we'll move onto creating the EC2 instance that will contain our WordPress application.
+After setting our credentials up with the CLI, we'll move onto creating the EC2 instance that will contain our WordPress application.
 <br />
 First we'll create our key pair for our instances. Open your terminal and run
 </p>
@@ -43,7 +43,7 @@ touch ami.json
 aws ec2 describe-images < ami.json
 ```
 <p>
-Inspect the list and choose an image. For this demonstration we I'll go the image ami-00000eba05d89f9dd.
+Inspect the list and choose an image. For this demonstration we I'll go with ami-00000eba05d89f9dd.
 <br />
 Finally we'll create and run our EC2 instance
 </p>
