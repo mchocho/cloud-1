@@ -57,7 +57,7 @@ You can <a href="./guide/iam.md">start here</a>
 
 Some further notes are provided for the commands we'll use for this project
 
-* <a href="#">IAM</a>
+* <a href="./documentation/iam.md">IAM</a>
 * <a href="#">EC2</a>
 * <a href="#">RDS</a>
 * <a href="#">elbv2</a>

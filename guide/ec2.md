@@ -23,7 +23,7 @@ aws ec2 create-scurity-group --group-name cloud-1 --description "Security group 
 ```
 
 <p>
-In our for us to connect with our instance we'll add rules to our security group.
+In order for us to connect with our instance we'll add rules to our security group.
 </p>
 
 ```bash
