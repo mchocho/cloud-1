@@ -17,22 +17,13 @@ aws rds create-db-subnet-group --db-subnet-group-name cloud-1 --db-subnet-group-
 ```
 
 <p>
-Next we'll create a security group for the instance.
-</p>
-
-```bash
-aws rds create-db-security-group --db-security-group-name cloud-1 --db-security-group-description "DB security group for cloud-1"
-```
-
-<p>
-Let's add rules to our security group so the EC2 instance can connect with the DB server.
+Let's add rules to our security group for the EC2 instance to connect with the DB server.
 </p>
 
 ```bash
 aws ec2 describe-security-groups #Grab cloud-1 security group id
 
 aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 3306 --protocol tcp
-
 ```
 
 <p>

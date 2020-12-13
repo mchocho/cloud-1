@@ -9,11 +9,11 @@ Now that we finally managed to get the WordPress app up & running, we'll need to
 </p>
 
 ```bash
-aws ec2 describe-security-groups 	#grab the securtiy group id
+aws ec2 describe-security-groups 	#Grab the securtiy group id
 
 aws ec2 describe-subnets
 
-aws elbv2 create-load-balancer --name cloud-1 --security-groups sg-CLOUD-1SGID --subnets subnet-b7d581c0 subnet-8360a9e7
+aws elbv2 create-load-balancer --name cloud-1 --scheme internal --security-groups sg-CLOUD-1SGID --subnets subnet-b7d581c0 subnet-8360a9e7
 ```
 
 <p>
@@ -33,7 +33,9 @@ Next we'll register the instances with the target group.
 </p>
 
 ```bash
-aws elbv2 register-targets --target-group-arn targetgroup-arn --targets Id=i-cloud-1-instance1234567890abcdef0 Id=i-cloud-1-db-instance1234567890abcdef0
+aws ec2 describe-instances	#Grab ec2 instance id
+
+aws elbv2 register-targets --target-group-arn targetgroup-arn --targets Id=i-cloud-1-instance1234567890abcdef0
 ```
 
 <p>
@@ -41,6 +43,10 @@ Lastly we'll create a listener for the load balancer to forward requests to the 
 </p>
 
 ```bash
+aws elbv2 describe-load-balancers	#Grab load balancer ARN
+
+aws elbv2 describe-target-groups 	#Grab target group ARN
+
 aws elbv2 create-listener --load-balancer-arn loadbalancer-arn --protocol HTTP --port 80 --default-actions Type=forward,TargetGroupArn=targetgroup-arn
 ```
 
