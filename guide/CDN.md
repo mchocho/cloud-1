@@ -24,4 +24,4 @@ You should now have a fully scalable web application.👏👏
 &lt; Previous
 </a>
 |
-<a href="../">Home</a>
+<a href="../README.md">Home</a>

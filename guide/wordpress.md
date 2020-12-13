@@ -29,7 +29,7 @@ Setup your MySQL hostname to the RDS ip address.
 ```bash
 aws rds describe-db-instances	#Find your RDS IP
 
-export MYSQL_HOST = <<enpoint>> #replace <<enpoint>> with your RDS IP
+export MYSQL_HOST=<<enpoint>> #replace <<enpoint>> with your RDS IP
 ```
 
 <p>
@@ -37,7 +37,7 @@ Next we'll setup the credentials for our DB.
 </p>
 
 ```bash
-mysql --user=admin --password=farewell42@WTC cloud-1
+mysql --user=admin --password=farewell42WTC wordpress
 ```
 
 <p>

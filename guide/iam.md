@@ -2,10 +2,23 @@
 
 <p>
 AWS identity and access management (IAM) is a web service that helps you control who is authenticated and authorized to use permissions. In order to deploy our website with AWS services you'll need to <a href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&src=default">create an AWS root and IAM account</a>.
+<br />
+Don't forget to give the user programmatic and management console access.
+<br />
+Create a group for the IAM user and give it the following policies:
+
+* AmazonEC2FullAccess
+* AmazonRDSFullAccess
+* AmazonS3FullAccess
+* AmazonVPCFullAccess
+* AWSElasticBeanstalkFullAccess
+* CloudWatchFullAccess
+* ElasticLoadBalancingFullAccess
+* IAMFullAccess
 </p>
 
 <p>
-After you've created your account copy your Access key ID and Secret Acces key and store them safely on your machine. Open your terminal and run
+After you've created the account copy the Access key ID, Secret Acces key and password. Store them safely on your machine. Open your terminal and run
 </p>
 
 ```bash
@@ -21,7 +34,7 @@ Every instance we create, stop, or destroy using the CLI will be in the name of 
 </p>
 
 <hr />
-<a href="../">
+<a href="../README.md">
 &lt; Previous
 </a>
 |

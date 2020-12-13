@@ -36,7 +36,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-* On windows open your terminal as administrator and run
+* On Windows open your terminal as administrator and run
 
 ```bash
 choco install awscli -y
@@ -58,9 +58,9 @@ You can <a href="./guide/iam.md">start here</a>
 Some further notes are provided for the commands we'll use for this project
 
 * <a href="./documentation/iam.md">IAM</a>
-* <a href="#">EC2</a>
-* <a href="#">RDS</a>
-* <a href="#">elbv2</a>
+* <a href="./documentation/ec2.md">EC2</a>
+* <a href="./documentation/rds.md">RDS</a>
+* <a href="#">Load balancer</a>
 * <a href="#">Autoscaling</a>
 
 ### `Contributors`
