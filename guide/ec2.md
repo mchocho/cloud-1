@@ -60,11 +60,13 @@ Finally we'll create and run the EC2 instance
 </p>
 
 ```bash
-aws ec2 describe-subnets		#Grab a subnet id
+aws ec2 describe-security-groups	#Grab cloud-1 security group id
+
+aws ec2 describe-subnets			#Grab a subnet id
 
 aws ec2 run-instances --instance-type t2.micro --count 1 --key-name cloud-1-key-pair --image-id ami-00000ebaEXAMPLE --security-group-ids sg-1234567EXAMPLE --subnet-id subnet-2ff123EXAMPLE 
 
-aws ec2 describe-instances		#Grab the Public DNS
+aws ec2 describe-instances			#Grab the Public DNS
 ```
 
 <p>
