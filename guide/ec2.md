@@ -39,7 +39,7 @@ aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 22 --proto
 aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 80 --protocol tcp --cidr 197.90.166.46/32 #HTTP
 ```
 <p>
-Next we'll need to find out the id of the AMI which we will use.
+Next we'll need to find out the id of the AMI to use.
 <br />
 <h3>Note! This command might take a while ☕</h3>
 </p>
@@ -54,7 +54,7 @@ aws ec2 describe-images > ami.json
 less ami.json
 ```
 <p>
-Inspect the list and choose an image. <strike>For this demonstration we I'll go with ami-00000eba05d89f9dd.</strike> It's been noted that Amazon changes the image ids periodically. An Amazon ECS Linux based AMI is recommended. If you're not sure of a particular image, search for it in the <a href="https://aws.amazon.com/marketplace/search/results?page=1&filters=fulfillment_options&fulfillment_options=Ami&ref_=header_nav_dm_ami">marketplace</a>
+Inspect the list and choose an image. <strike>For this demonstration we I'll go with ami-00000eba05d89f9dd.</strike> It's been noted that Amazon changes their image ids periodically. An Amazon ECS Linux based AMI is recommended. If you're not sure of a particular image, search for it in the <a href="https://aws.amazon.com/marketplace/search/results?page=1&filters=fulfillment_options&fulfillment_options=Ami&ref_=header_nav_dm_ami">marketplace</a>
 <br />
 Finally we'll create and run the EC2 instance
 </p>

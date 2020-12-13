@@ -7,27 +7,46 @@ We will use Amazon's <a href="https://awscli.amazonaws.com/v2/documentation/api/
 <p>
 
 <p>
-Lets start off by creating a subnet group for our db instance.
+Lets start off by creating a subnet group for the DB instance.
 </p>
 
 ```bash
 aws ec2 describe-subnets	#grab 2 subnets from different zone
 
-aws rds create-db-subnet cloud-1 --db-subnet-group-description "Cloud-1 db subnet group" --subnet-ids ["subnet-01234567A", "subnet-01234567B"]
+aws rds create-db-subnet-group --db-subnet-group-name cloud-1 --db-subnet-group-description "Cloud-1 db subnet group" --subnet-ids '["subnet-02a5b878", "subnet-2025824b"]'
 ```
 
 <p>
-Then we'll create the instance for our databse
+Next we'll create a security group for the instance.
+</p>
+
+```bash
+aws rds create-db-security-group --db-security-group-name cloud-1 --db-security-group-description "DB security group for cloud-1"
+```
+
+<p>
+Let's add rules to our security group so the EC2 instance can connect with the DB server.
+</p>
+
+```bash
+aws ec2 describe-security-groups #Grab cloud-1 security group id
+
+aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 3306 --protocol tcp
+
+```
+
+<p>
+Then we'll create the instance for the databse.
 </p>
 
 ```bash
 aws ec2 describe-security-groups 	#grab the sg id
 
-aws rds create-db-instance cloud-1 --db-instance-class db.t2.mirco --engine mysql --master-username admin --master-user-password farewll42@WTC --db-subnet-group-name cloud-1 --availability-zone us-east2 --storage-encrypted --vpc-security-group-ids '["sg-12345A"]'
+aws rds create-db-instance --db-instance-identifier cloud-1-mysql-db --db-name wordpress --db-instance-class db.t2.micro --engine mysql --master-username admin --master-user-password "farewell42WTC" --db-subnet-group-name cloud-1 --availability-zone us-east-2b --allocated-storage 20 --vpc-security-group-ids sg-0c4b0ef20959f96fa
 ```
 
 <p>
-If everything goes well you should have an rds instance up and running run describe-rds-instances to verify it's running.
+If everything goes well you should have an RDS instance up. To verify that the instance is run use the command describe-rds-instances.
 </p>
 
 <hr />

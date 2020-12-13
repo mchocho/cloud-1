@@ -9,7 +9,7 @@ Let's start off with an SSH into our EC2 instance:
 ```bash
 aws ec2 describe-instances 		#grab the public DNS name
 
-ssh -i cloud-1-key-pair ec2-user@<<PUBLIC_DNS_NAME>>
+ssh -i cloud-1-key-pair.pem ec2-user@<<PUBLIC_DNS_NAME>>
 ```
 
 <p>
@@ -29,7 +29,7 @@ Setup your MySQL hostname to the RDS ip address.
 ```bash
 aws rds describe-db-instances	#Find your RDS IP
 
-export MYSQL_HOST=<<enpoint>> #replace <<enpoint>> with your RDS IP
+export MYSQL_HOST=<<enpoint>> 	#replace <<enpoint>> with your RDS IP
 ```
 
 <p>
@@ -81,11 +81,11 @@ Open the wp-config.php file with a text editor.
 </p>
 
 ```bash
-nano wp-config.php
+vim wp-config.php
 
-* DB_NAME: cloud-1
+* DB_NAME: wordpress
 * DB_USER: admin
-* DB_PASSWORD: farewell42@WTC
+* DB_PASSWORD: farewell42WTC
 * DB_HOST: <<DB HOSTNAME>>
 ```
 <p>
@@ -95,17 +95,19 @@ Next we will deploy WordPress.
 </p>
 
 ```bash
-sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+sudo yum install -y httpd24 php72 mysql57-server php72-mysqlnd
 
-cd /home/ec2-user
+cp -r wordpress/* /var/www/html/
 
-sudo cp -r wordpress/* /var/www/html/
+service httpd restart
 
-sudo service httpd restart
+chkconfig httpd on
+
+chkconfig --list httpd #httpd should be on in runlevels 2, 3, 4, and 5
 ```
 
 <p>
-If you see the WordPress welcome page, that means tje installation was successful.
+If you see the WordPress welcome page, that means the installation was successful.
 </p>
 
 <hr />
