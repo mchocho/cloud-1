@@ -68,8 +68,3 @@ Some further notes are provided for the commands we'll use for this project
 * <a href="https://github.com/PhethulwaziD">P. Donga</a>
 * <a href="https://github.com/samofoke">S. Mofokeng</a>
 * <a href="https://github.com/mnchabeleng">M. "The Machine" Nchabeleng</a>
-
-<hr />
-<a href="./guide/iam.md" align="right">
-Next &gt;
-</a>
