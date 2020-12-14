@@ -26,7 +26,7 @@ We will be using the Amazon AWS CLI to create an configure our website. This wil
 
 ### `Install`
 
-Download and install <a href="https://www.python.org/downloads/">Python</a>
+Make sure you have <a href="https://www.python.org/downloads/">Python</a> installed.
 
 * On Linux run
 
@@ -50,7 +50,7 @@ Copy your Access key ID and Secret Access key and store them safely on your mach
 
 ### `Guide`
 
-This guide is cut into six sections. By following these steps you will end up with a running scalable instance of a wordpress application.
+This guide is cut into seven sections. By following these steps you will end up with a running scalable instance of a wordpress application.
 You can <a href="./guide/iam.md">start here</a>
 
 ### `Documentation`
@@ -60,14 +60,14 @@ Some further notes are provided for the commands we'll use for this project
 * <a href="./documentation/iam.md">IAM</a>
 * <a href="./documentation/ec2.md">EC2</a>
 * <a href="./documentation/rds.md">RDS</a>
-* <a href="#">Load balancer</a>
-* <a href="#">Autoscaling</a>
+* <a href="./documentation/load_balancer.md">Load balancer</a>
+* <a href="./documentation/auto_scaling.md">Auto scaling</a>
 
 ### `Contributors`
 
 * <a href="https://github.com/PhethulwaziD">P. Donga</a>
-* <a href="https://github.com/mnchabeleng">M. Nchabeleng</a>
 * <a href="https://github.com/samofoke">S. Mofokeng</a>
+* <a href="https://github.com/mnchabeleng">M. "The Machine" Nchabeleng</a>
 
 <hr />
 <a href="./guide/iam.md" align="right">

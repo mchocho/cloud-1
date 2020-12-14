@@ -5,7 +5,7 @@
 </p>
 
 <p>
-Now that we finally managed to get the WordPress app up & running, we'll need to add the <a href="">load balancer</a>
+Now that we finally managed to get the WordPress app up & running, we'll need to add the <a href="../documentation/load_balancer.md">load balancer</a>
 </p>
 
 ```bash

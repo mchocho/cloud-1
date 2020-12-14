@@ -13,6 +13,7 @@ Create a group for the IAM user and give it the following policies:
 * AmazonVPCFullAccess
 * AWSElasticBeanstalkFullAccess
 * AutoScalingFullAccess
+* AutoScalingConsoleFullAccess
 * CloudWatchFullAccess
 * ElasticLoadBalancingFullAccess
 * IAMFullAccess

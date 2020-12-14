@@ -36,7 +36,9 @@ aws ec2 describe-security-groups	#Grab cloud-1 security group id
 
 aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 22 --protocol tcp --cidr 197.90.166.46/32 #SSH
 
-aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 80 --protocol tcp --cidr 197.90.166.46/32 #HTTP
+aws ec2 authorize-security-group-ingress --group-id sg-1234567 --port 80 --protocol tcp --cidr 197.90.166.46/32 #HTTP inbound
+
+aws ec2 authorize-security-group-egress  --group-id sg-1234567 --port 80 --protocol tcp --cidr 197.90.166.46/32 #HTTP outbound
 ```
 <p>
 Next we'll need to find out the id of the AMI to use.

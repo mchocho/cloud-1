@@ -5,11 +5,11 @@
 </p>
 
 <p>
-We're almost there. The application is up and running with a load balancer to help distribute incoming traffic. Next we will enable <a href="">auto scaling</a> for the EC2 incstance to ensure we have the correct number of instances available to handle the load for the application.
+We're almost there. The application is up and running with a load balancer to help distribute incoming traffic. Next we will enable <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html">auto scaling</a> for the EC2 incstance to ensure we have the correct number of instances available to handle the load for the application.
 </p>
 
 ```bash
-aws ec2 describe-instances		#Grab ec2 instance id
+aws ec2 describe-instances			#Grab ec2 instance id
 
 aws elbv2 describe-target-groups 	#Grab target group ARN
 

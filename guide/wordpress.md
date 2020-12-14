@@ -52,7 +52,7 @@ Exit
 ```
 
 <p>
-Now, let's install and run apache.
+Now, let's install and run Apache.
 </p>
 
 ```bash
@@ -95,9 +95,11 @@ Next we will deploy WordPress.
 </p>
 
 ```bash
-sudo yum install -y httpd24 php72 mysql57-server php72-mysqlnd
+yum install -y httpd24 php72 mysql57-server php72-mysqlnd
 
 cp -r wordpress/* /var/www/html/
+
+chown -R apache:apache /var/www/html
 
 service httpd restart
 
