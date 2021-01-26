@@ -48,7 +48,7 @@ aws rds delete-db-instance --db-instance-identifier cloud-1-mysql-db
 
 ```
 
-Don't forget to check if there might be any instances running that you aren't aware of.
+Don't forget to check if there are any instances running that you aren't aware of.
 If you're having issues you can always use the <a href="https://console.aws.amazon.com/ec2/">AWS Console</a> 
 
 <hr />
