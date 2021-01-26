@@ -9,6 +9,8 @@ Let's start off with an SSH into our EC2 instance:
 ```bash
 aws ec2 describe-instances 		#grab the public DNS name
 
+chmod 600 cloud-1-key-pair.pem
+
 ssh -i cloud-1-key-pair.pem ec2-user@<<PUBLIC_DNS_NAME>>
 ```
 
