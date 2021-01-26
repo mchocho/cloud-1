@@ -18,7 +18,7 @@
 In this project you will have to install a simple wordpress website on a cloud infrastructure.
 <br />
 
-We will be using the Amazon AWS CLI to create and configure our website. This will be acheived using the <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/index.html">EC2</a>, <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elbv2/index.html">elbv2</a>, <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html">rds</a>, and <a href="https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html">autoscaling</a> commands. The subject can be found <a href="./doc/cloud-1.en.pdf">here</a>
+We will be using the Amazon AWS CLI to create and configure our website. This will be acheived using the <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/index.html">EC2</a>, <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elbv2/index.html">elbv2</a>, <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/index.html">rds</a>, and <a href="https://docs.aws.amazon.com/cli/latest/reference/autoscaling/index.html">autoscaling</a> commands. The subject can be found <a href="./doc/cloud-1.en.pdf">here</a>.
 
 ### `Schema`
 

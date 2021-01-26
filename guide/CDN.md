@@ -26,4 +26,6 @@ You should now have a fully scalable web application.👏👏
 &lt; Previous
 </a>
 |
-<a href="../README.md">Home</a>
+<a href="terminate.md">
+Next  &gt;
+</a>
