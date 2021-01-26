@@ -23,13 +23,13 @@ aws ec2 describe-instances
 
 ```
 
-To <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/stop-instances.html">stop</a> and <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/terminate-instances.html">terminate</a> your ec2 instances run:
+To <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/stop-instances.html">stop [1]</a> and <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/terminate-instances.html">terminate</a> your ec2 instances run:
 
 ```bash
 # Find remaining instances
 aws ec2 describe-instances
 
-# Stop the ec2 instance. Amazon won't charge for a stopped instance.
+# Stop the ec2 instance. Amazon won't charge for a stopped instance[1].
 aws ec2 stop-instances --instance-ids i-0e42
 
 # Terminate (delete) your ec2 instance
