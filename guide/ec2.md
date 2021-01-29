@@ -20,7 +20,8 @@ Next we'll create our security group for the instance.
 </p>
 
 ```bash
-aws ec2 describe-vpcs	#Pick a vpc-id to use
+# Pick a vpc-id to use
+aws ec2 describe-vpcs
 
 aws ec2 create-security-group --group-name cloud-1 --description "Security group for Wordpress instance" --vpc-id vpc-d079c6bb
 ```
@@ -30,7 +31,11 @@ In order for us to connect with our instance we'll add rules to our security gro
 </p>
 
 ```bash
-curl ifconfig.me -s #Grab IP address
+# Grab IP address
+ip addr | grep inet | awk '{if (NR == 3) print $2}'
+
+# Grab IP address for Windows
+curl ifconfig.me -s
 
 aws ec2 describe-security-groups	#Grab cloud-1 security group id
 

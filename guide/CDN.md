@@ -22,7 +22,7 @@ You should now have a fully scalable web application.👏👏
 </p>
 
 <hr />
-<a href="load_balance.md">
+<a href="load_balancer.md">
 &lt; Previous
 </a>
 |

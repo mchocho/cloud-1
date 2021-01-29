@@ -7,10 +7,12 @@ Let's start off with an SSH into our EC2 instance:
 </p>
 
 ```bash
-aws ec2 describe-instances 		#grab the public DNS name
+# Grab the public DNS name
+aws ec2 describe-instances
 
 chmod 600 cloud-1-key-pair.pem
 
+# For Debian EC2 instance the user is admin 
 ssh -i cloud-1-key-pair.pem ec2-user@<<PUBLIC_DNS_NAME>>
 ```
 
@@ -29,9 +31,11 @@ Setup your MySQL hostname to the RDS ip address.
 </p>
 
 ```bash
-aws rds describe-db-instances	#Find your RDS IP
+# Find your RDS IP
+aws rds describe-db-instances
 
-export MYSQL_HOST=<<enpoint>> 	#replace <<enpoint>> with your RDS IP
+# replace <<enpoint>> with your RDS IP
+export MYSQL_HOST=<<enpoint>>
 ```
 
 <p>
@@ -107,7 +111,8 @@ service httpd restart
 
 chkconfig httpd on
 
-chkconfig --list httpd #httpd should be on in runlevels 2, 3, 4, and 5
+# httpd should be on in runlevels 2, 3, 4, and 5
+chkconfig --list httpd
 ```
 
 <p>
